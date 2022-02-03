@@ -1,4 +1,4 @@
-﻿/*!
+﻿/** \file Modbus.c
  *  \brief     Modbus RTU模式下数据包处理C源代码
  *  \author    何亚红
  *  \version   20220203

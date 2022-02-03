@@ -44,6 +44,9 @@ $(function() {
 <div class="title">Modbus.c 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Modbus RTU模式下数据包处理C源代码  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_modbus_8h_source.html">Modbus.h</a>&quot;</code><br />
 </div>
 <p><a href="_modbus_8c_source.html">浏览源代码.</a></p>
@@ -51,7 +54,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a8e9d9d60333abcc37fe04d9353d1bcd3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#a8e9d9d60333abcc37fe04d9353d1bcd3">Modbus_Payload_Check_CRC</a> (uint8_t *payload, size_t payload_length)</td></tr>
-<tr class="memdesc:a8e9d9d60333abcc37fe04d9353d1bcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus RTU模式下数据包处理头文件  <a href="_modbus_8c.html#a8e9d9d60333abcc37fe04d9353d1bcd3">更多...</a><br /></td></tr>
+<tr class="memdesc:a8e9d9d60333abcc37fe04d9353d1bcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查一帧数据的crc  <a href="_modbus_8c.html#a8e9d9d60333abcc37fe04d9353d1bcd3">更多...</a><br /></td></tr>
 <tr class="separator:a8e9d9d60333abcc37fe04d9353d1bcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af35d2d5cac75013dbff44ddf7c5524d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#af35d2d5cac75013dbff44ddf7c5524d3">Modbus_Payload_Append_CRC</a> (uint8_t *payload, size_t payload_length)</td></tr>
 <tr class="memdesc:af35d2d5cac75013dbff44ddf7c5524d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">在数据帧末尾的添加crc校验  <a href="_modbus_8c.html#af35d2d5cac75013dbff44ddf7c5524d3">更多...</a><br /></td></tr>
@@ -78,7 +81,15 @@ $(function() {
 <tr class="memdesc:a4f51946ea8b2ddc288d82b111b075551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus主机写保持寄存器  <a href="_modbus_8c.html#a4f51946ea8b2ddc288d82b111b075551">更多...</a><br /></td></tr>
 <tr class="separator:a4f51946ea8b2ddc288d82b111b075551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Modbus RTU模式下数据包处理C源代码 </p>
+<dl class="section author"><dt>作者</dt><dd>何亚红 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>20220203 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>MIT License. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 中定义.</p>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="ab9127c175d12c178db8bb57b4d92e8c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9127c175d12c178db8bb57b4d92e8c9">&#9670;&nbsp;</a></span>Modbus_Master_Read_Hold_Register()</h2>
 
@@ -553,12 +564,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Modbus RTU模式下数据包处理头文件 </p>
-<dl class="section author"><dt>作者</dt><dd>何亚红 </dd></dl>
-<dl class="section version"><dt>版本</dt><dd>20220203 </dd></dl>
-<dl class="section date"><dt>日期</dt><dd>2022 </dd></dl>
-<dl class="section copyright"><dt>版权所有</dt><dd>MIT License.</dd></dl>
-<p>检查一帧数据的crc</p>
+<p>检查一帧数据的crc </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">payload</td><td>整帧数据(包含CRC)的指针 </td></tr>

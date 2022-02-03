@@ -39,5 +39,5 @@
 
 进入doc目录后，直接运行doxygen程序,可在output目录中得到最新的文档。
 
-已生成的文档见 [doc/html/index.html](doc/html/index.html)
+已编译的文档见 [doc/html/index.chm](doc/html/index.chm)
 
