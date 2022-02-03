@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleModbusRTUPacket: Modbus.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleModbusRTUPacket
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">Modbus.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_modbus_8h_source.html">Modbus.h</a>&quot;</code><br />
+</div>
+<p><a href="_modbus_8c_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a8e9d9d60333abcc37fe04d9353d1bcd3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#a8e9d9d60333abcc37fe04d9353d1bcd3">Modbus_Payload_Check_CRC</a> (uint8_t *payload, size_t payload_length)</td></tr>
+<tr class="memdesc:a8e9d9d60333abcc37fe04d9353d1bcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus RTU模式下数据包处理头文件  <a href="_modbus_8c.html#a8e9d9d60333abcc37fe04d9353d1bcd3">更多...</a><br /></td></tr>
+<tr class="separator:a8e9d9d60333abcc37fe04d9353d1bcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35d2d5cac75013dbff44ddf7c5524d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#af35d2d5cac75013dbff44ddf7c5524d3">Modbus_Payload_Append_CRC</a> (uint8_t *payload, size_t payload_length)</td></tr>
+<tr class="memdesc:af35d2d5cac75013dbff44ddf7c5524d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">在数据帧末尾的添加crc校验  <a href="_modbus_8c.html#af35d2d5cac75013dbff44ddf7c5524d3">更多...</a><br /></td></tr>
+<tr class="separator:af35d2d5cac75013dbff44ddf7c5524d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74909e13218e10cf373ee2905f4c1f9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#a74909e13218e10cf373ee2905f4c1f9a">Modbus_Slave_Parse_Input</a> (<a class="el" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a> *ctx, uint8_t *input_data, size_t input_data_length, uint8_t *buff, size_t buff_length)</td></tr>
+<tr class="memdesc:a74909e13218e10cf373ee2905f4c1f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus从机解析输入。 当从机接收到一帧数据后，调用此函数。 此函数会自动调用相关回调函数完成Modbus输出。  <a href="_modbus_8c.html#a74909e13218e10cf373ee2905f4c1f9a">更多...</a><br /></td></tr>
+<tr class="separator:a74909e13218e10cf373ee2905f4c1f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e4ab8aa23879aff37ea238f5f8f35c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#a45e4ab8aa23879aff37ea238f5f8f35c">Modbus_Master_Read_OX</a> (<a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</td></tr>
+<tr class="memdesc:a45e4ab8aa23879aff37ea238f5f8f35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus主机读取输出线圈  <a href="_modbus_8c.html#a45e4ab8aa23879aff37ea238f5f8f35c">更多...</a><br /></td></tr>
+<tr class="separator:a45e4ab8aa23879aff37ea238f5f8f35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef99e16b9b8f1c63edb8d7d7bbfc7ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#a7ef99e16b9b8f1c63edb8d7d7bbfc7ad">Modbus_Master_Read_IX</a> (<a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</td></tr>
+<tr class="memdesc:a7ef99e16b9b8f1c63edb8d7d7bbfc7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus主机读取输入点  <a href="_modbus_8c.html#a7ef99e16b9b8f1c63edb8d7d7bbfc7ad">更多...</a><br /></td></tr>
+<tr class="separator:a7ef99e16b9b8f1c63edb8d7d7bbfc7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9127c175d12c178db8bb57b4d92e8c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#ab9127c175d12c178db8bb57b4d92e8c9">Modbus_Master_Read_Hold_Register</a> (<a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</td></tr>
+<tr class="memdesc:ab9127c175d12c178db8bb57b4d92e8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus主机读取保持寄存器  <a href="_modbus_8c.html#ab9127c175d12c178db8bb57b4d92e8c9">更多...</a><br /></td></tr>
+<tr class="separator:ab9127c175d12c178db8bb57b4d92e8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ffc37e7928254e715c1ef5e177caa3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#ab3ffc37e7928254e715c1ef5e177caa3">Modbus_Master_Read_Input_Register</a> (<a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</td></tr>
+<tr class="memdesc:ab3ffc37e7928254e715c1ef5e177caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus主机读取输入寄存器  <a href="_modbus_8c.html#ab3ffc37e7928254e715c1ef5e177caa3">更多...</a><br /></td></tr>
+<tr class="separator:ab3ffc37e7928254e715c1ef5e177caa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601985cfdfebcfa95ca9129cb0b9ea7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#a601985cfdfebcfa95ca9129cb0b9ea7d">Modbus_Master_Write_OX</a> (<a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</td></tr>
+<tr class="memdesc:a601985cfdfebcfa95ca9129cb0b9ea7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus主机写输出线圈  <a href="_modbus_8c.html#a601985cfdfebcfa95ca9129cb0b9ea7d">更多...</a><br /></td></tr>
+<tr class="separator:a601985cfdfebcfa95ca9129cb0b9ea7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f51946ea8b2ddc288d82b111b075551"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_modbus_8c.html#a4f51946ea8b2ddc288d82b111b075551">Modbus_Master_Write_Hold_Register</a> (<a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</td></tr>
+<tr class="memdesc:a4f51946ea8b2ddc288d82b111b075551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus主机写保持寄存器  <a href="_modbus_8c.html#a4f51946ea8b2ddc288d82b111b075551">更多...</a><br /></td></tr>
+<tr class="separator:a4f51946ea8b2ddc288d82b111b075551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="ab9127c175d12c178db8bb57b4d92e8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9127c175d12c178db8bb57b4d92e8c9">&#9670;&nbsp;</a></span>Modbus_Master_Read_Hold_Register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Master_Read_Hold_Register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buff_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus主机读取保持寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>上下文指针,需要自行定义 </td></tr>
+    <tr><td class="paramname">start_addr</td><td>起始地址(寻址地址) </td></tr>
+    <tr><td class="paramname">data</td><td>待读取的数据指针 </td></tr>
+    <tr><td class="paramname">number</td><td>待读取数据长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>缓冲,用于发送和接收数据，尽量大 </td></tr>
+    <tr><td class="paramname">buff_length</td><td>缓冲长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功执行 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00545">545</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab3ffc37e7928254e715c1ef5e177caa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ffc37e7928254e715c1ef5e177caa3">&#9670;&nbsp;</a></span>Modbus_Master_Read_Input_Register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Master_Read_Input_Register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buff_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus主机读取输入寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>上下文指针,需要自行定义 </td></tr>
+    <tr><td class="paramname">start_addr</td><td>起始地址(寻址地址) </td></tr>
+    <tr><td class="paramname">data</td><td>待读取的数据指针 </td></tr>
+    <tr><td class="paramname">number</td><td>待读取数据长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>缓冲,用于发送和接收数据，尽量大 </td></tr>
+    <tr><td class="paramname">buff_length</td><td>缓冲长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功执行 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00591">591</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7ef99e16b9b8f1c63edb8d7d7bbfc7ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef99e16b9b8f1c63edb8d7d7bbfc7ad">&#9670;&nbsp;</a></span>Modbus_Master_Read_IX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Master_Read_IX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buff_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus主机读取输入点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>上下文指针,需要自行定义 </td></tr>
+    <tr><td class="paramname">start_addr</td><td>起始地址(寻址地址) </td></tr>
+    <tr><td class="paramname">data</td><td>待读取的数据指针 </td></tr>
+    <tr><td class="paramname">number</td><td>待读取数据长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>缓冲,用于发送和接收数据，尽量大 </td></tr>
+    <tr><td class="paramname">buff_length</td><td>缓冲长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功执行 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00499">499</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a45e4ab8aa23879aff37ea238f5f8f35c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e4ab8aa23879aff37ea238f5f8f35c">&#9670;&nbsp;</a></span>Modbus_Master_Read_OX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Master_Read_OX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buff_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus主机读取输出线圈 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>上下文指针,需要自行定义 </td></tr>
+    <tr><td class="paramname">start_addr</td><td>起始地址(寻址地址) </td></tr>
+    <tr><td class="paramname">data</td><td>待读取的数据指针 </td></tr>
+    <tr><td class="paramname">number</td><td>待读取数据长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>缓冲,用于发送和接收数据，尽量大 </td></tr>
+    <tr><td class="paramname">buff_length</td><td>缓冲长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功执行 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00453">453</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4f51946ea8b2ddc288d82b111b075551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f51946ea8b2ddc288d82b111b075551">&#9670;&nbsp;</a></span>Modbus_Master_Write_Hold_Register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Master_Write_Hold_Register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buff_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus主机写保持寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>上下文指针,需要自行定义 </td></tr>
+    <tr><td class="paramname">start_addr</td><td>起始地址(寻址地址) </td></tr>
+    <tr><td class="paramname">data</td><td>待写入的数据指针 </td></tr>
+    <tr><td class="paramname">number</td><td>待写入数据长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>缓冲,用于发送和接收数据，尽量大 </td></tr>
+    <tr><td class="paramname">buff_length</td><td>缓冲长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功执行 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00787">787</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a601985cfdfebcfa95ca9129cb0b9ea7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601985cfdfebcfa95ca9129cb0b9ea7d">&#9670;&nbsp;</a></span>Modbus_Master_Write_OX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Master_Write_OX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>start_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buff_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus主机写输出线圈 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>上下文指针,需要自行定义 </td></tr>
+    <tr><td class="paramname">start_addr</td><td>起始地址(寻址地址) </td></tr>
+    <tr><td class="paramname">data</td><td>待写入的数据指针 </td></tr>
+    <tr><td class="paramname">number</td><td>待写入数据长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>缓冲,用于发送和接收数据，尽量大 </td></tr>
+    <tr><td class="paramname">buff_length</td><td>缓冲长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功执行 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00683">683</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af35d2d5cac75013dbff44ddf7c5524d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35d2d5cac75013dbff44ddf7c5524d3">&#9670;&nbsp;</a></span>Modbus_Payload_Append_CRC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Payload_Append_CRC </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>payload_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在数据帧末尾的添加crc校验 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">payload</td><td>整帧数据的指针，需要在末尾留两个字节以填写CRC </td></tr>
+    <tr><td class="paramname">payload_length</td><td>长度(包含CRC) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否调用成功 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00071">71</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8e9d9d60333abcc37fe04d9353d1bcd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e9d9d60333abcc37fe04d9353d1bcd3">&#9670;&nbsp;</a></span>Modbus_Payload_Check_CRC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Payload_Check_CRC </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>payload_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus RTU模式下数据包处理头文件 </p>
+<dl class="section author"><dt>作者</dt><dd>何亚红 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>20220203 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>MIT License.</dd></dl>
+<p>检查一帧数据的crc</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">payload</td><td>整帧数据(包含CRC)的指针 </td></tr>
+    <tr><td class="paramname">payload_length</td><td>长度(包含CRC) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>CRC是否通过 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a74909e13218e10cf373ee2905f4c1f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74909e13218e10cf373ee2905f4c1f9a">&#9670;&nbsp;</a></span>Modbus_Slave_Parse_Input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Modbus_Slave_Parse_Input </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>input_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>input_data_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buff_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modbus从机解析输入。 当从机接收到一帧数据后，调用此函数。 此函数会自动调用相关回调函数完成Modbus输出。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>上下文指针,需要自行定义 </td></tr>
+    <tr><td class="paramname">input_data</td><td>输入数据指针 </td></tr>
+    <tr><td class="paramname">input_data_length</td><td>输入数据长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>缓冲(存放临时数据) </td></tr>
+    <tr><td class="paramname">buff_length</td><td>缓冲长度(需大于等于输入数据长度，足够存放输出数据) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功执行 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8c_source.html">Modbus.c</a> 第 <a class="el" href="_modbus_8c_source.html#l00090">90</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

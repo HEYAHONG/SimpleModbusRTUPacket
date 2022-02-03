@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleModbusRTUPacket: modbus_slave_context_t结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleModbusRTUPacket
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structmodbus__slave__context__t-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">modbus_slave_context_t结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_modbus_8h_source.html">Modbus.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac41e4cb335390a1395bf4f012604a74e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#ac41e4cb335390a1395bf4f012604a74e">slave_addr</a></td></tr>
+<tr class="separator:ac41e4cb335390a1395bf4f012604a74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ecebe6b25f434be745b133d575d0184"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#a6ecebe6b25f434be745b133d575d0184">output</a> )(uint8_t *data, size_t data_length)</td></tr>
+<tr class="memdesc:a6ecebe6b25f434be745b133d575d0184"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口输出函数,当解析完成后，将调用此函数输出数据，不可为NULL。  <a href="structmodbus__slave__context__t.html#a6ecebe6b25f434be745b133d575d0184">更多...</a><br /></td></tr>
+<tr class="separator:a6ecebe6b25f434be745b133d575d0184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a973f81370107853a7566b4c84b840"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#a13a973f81370107853a7566b4c84b840">read_IX</a> )(size_t addr)</td></tr>
+<tr class="memdesc:a13a973f81370107853a7566b4c84b840"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取输入点（线圈）  <a href="structmodbus__slave__context__t.html#a13a973f81370107853a7566b4c84b840">更多...</a><br /></td></tr>
+<tr class="separator:a13a973f81370107853a7566b4c84b840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ae0ffa4d858b84c7b1f4a6a575afc1"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#ac3ae0ffa4d858b84c7b1f4a6a575afc1">write_OX</a> )(size_t addr, uint16_t data)</td></tr>
+<tr class="memdesc:ac3ae0ffa4d858b84c7b1f4a6a575afc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">写输出线圈  <a href="structmodbus__slave__context__t.html#ac3ae0ffa4d858b84c7b1f4a6a575afc1">更多...</a><br /></td></tr>
+<tr class="separator:ac3ae0ffa4d858b84c7b1f4a6a575afc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d391ebbc76b36a23b15c5909be65fe"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#a85d391ebbc76b36a23b15c5909be65fe">read_OX</a> )(size_t addr)</td></tr>
+<tr class="memdesc:a85d391ebbc76b36a23b15c5909be65fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">读输出线圈  <a href="structmodbus__slave__context__t.html#a85d391ebbc76b36a23b15c5909be65fe">更多...</a><br /></td></tr>
+<tr class="separator:a85d391ebbc76b36a23b15c5909be65fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee90354d50e25e1aed184573eec44a4"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#abee90354d50e25e1aed184573eec44a4">read_hold_register</a> )(size_t addr)</td></tr>
+<tr class="memdesc:abee90354d50e25e1aed184573eec44a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">读保持寄存器  <a href="structmodbus__slave__context__t.html#abee90354d50e25e1aed184573eec44a4">更多...</a><br /></td></tr>
+<tr class="separator:abee90354d50e25e1aed184573eec44a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4342c6fd0562ae717fb64a12cf11c5"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#a6f4342c6fd0562ae717fb64a12cf11c5">write_hold_register</a> )(size_t addr, uint16_t data)</td></tr>
+<tr class="memdesc:a6f4342c6fd0562ae717fb64a12cf11c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">写保持寄存器  <a href="structmodbus__slave__context__t.html#a6f4342c6fd0562ae717fb64a12cf11c5">更多...</a><br /></td></tr>
+<tr class="separator:a6f4342c6fd0562ae717fb64a12cf11c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f831b8fea5fc21a7692f1ff7e7122c"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodbus__slave__context__t.html#af3f831b8fea5fc21a7692f1ff7e7122c">read_input_register</a> )(size_t addr)</td></tr>
+<tr class="memdesc:af3f831b8fea5fc21a7692f1ff7e7122c"><td class="mdescLeft">&#160;</td><td class="mdescRight">读输入寄存器  <a href="structmodbus__slave__context__t.html#af3f831b8fea5fc21a7692f1ff7e7122c">更多...</a><br /></td></tr>
+<tr class="separator:af3f831b8fea5fc21a7692f1ff7e7122c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00043">43</a> 行定义.</p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a6ecebe6b25f434be745b133d575d0184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ecebe6b25f434be745b133d575d0184">&#9670;&nbsp;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* modbus_slave_context_t::output) (uint8_t *data, size_t data_length)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口输出函数,当解析完成后，将调用此函数输出数据，不可为NULL。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>串口输出数据的指针 </td></tr>
+    <tr><td class="paramname">data_length</td><td>串口输出数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00056">56</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abee90354d50e25e1aed184573eec44a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee90354d50e25e1aed184573eec44a4">&#9670;&nbsp;</a></span>read_hold_register</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t(* modbus_slave_context_t::read_hold_register) (size_t addr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读保持寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>数据 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00088">88</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af3f831b8fea5fc21a7692f1ff7e7122c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f831b8fea5fc21a7692f1ff7e7122c">&#9670;&nbsp;</a></span>read_input_register</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t(* modbus_slave_context_t::read_input_register) (size_t addr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读输入寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>数据 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00104">104</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a13a973f81370107853a7566b4c84b840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a973f81370107853a7566b4c84b840">&#9670;&nbsp;</a></span>read_IX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* modbus_slave_context_t::read_IX) (size_t addr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取输入点（线圈） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool 当前状态 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00064">64</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a85d391ebbc76b36a23b15c5909be65fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d391ebbc76b36a23b15c5909be65fe">&#9670;&nbsp;</a></span>read_OX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* modbus_slave_context_t::read_OX) (size_t addr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读输出线圈 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>当前状态 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00080">80</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac41e4cb335390a1395bf4f012604a74e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41e4cb335390a1395bf4f012604a74e">&#9670;&nbsp;</a></span>slave_addr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t modbus_slave_context_t::slave_addr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>从机地址,主要指本从机地址 </p>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6f4342c6fd0562ae717fb64a12cf11c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4342c6fd0562ae717fb64a12cf11c5">&#9670;&nbsp;</a></span>write_hold_register</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* modbus_slave_context_t::write_hold_register) (size_t addr, uint16_t data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>写保持寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>地址 </td></tr>
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00096">96</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac3ae0ffa4d858b84c7b1f4a6a575afc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ae0ffa4d858b84c7b1f4a6a575afc1">&#9670;&nbsp;</a></span>write_OX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* modbus_slave_context_t::write_OX) (size_t addr, uint16_t data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>写输出线圈 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>地址 </td></tr>
+    <tr><td class="paramname">data</td><td>数据,数据定义查看Modbus协议定义 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_modbus_8h_source.html">Modbus.h</a> 第 <a class="el" href="_modbus_8h_source.html#l00073">73</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="_modbus_8h_source.html">Modbus.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

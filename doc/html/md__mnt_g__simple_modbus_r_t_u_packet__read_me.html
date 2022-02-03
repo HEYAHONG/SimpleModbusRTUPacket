@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleModbusRTUPacket: 说明</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleModbusRTUPacket
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">说明 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>极其简易的Modbus-RTU模式数据包处理。</p>
+<p>一般用于单片机，本代码只包含数据包处理程序，时序部分需要在单片机其它代码中实现。</p>
+<p>特点如下:</p>
+<ul>
+<li>代码极其简易，便于移植。</li>
+<li>可用于各类带硬件串口的单片机。</li>
+<li>使用简单</li>
+</ul>
+<p>缺陷:</p>
+<ul>
+<li>串口驱动以及Modbus时序需要自行编写。</li>
+<li>未进行某些检查。</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1"></a>
+使用</h1>
+<p>注意事项:</p>
+<ul>
+<li>本代码中的地址都是从0开始的，但Modbus标准协议中地址规定是从1(数据帧中仍然是从0开始)开始。</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+主机</h2>
+<p>主机主要使用modbus_master_context_t结构体及 Modbus_Master开头的函数。主要步骤如下:</p>
+<ul>
+<li>定义modbus_master_context_t结构体,并填写相关成员(回调函数需自行定义，通常不可为NULL)。</li>
+<li>当需要请求数据时,调用Modbus_Master系列函数。</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+从机</h2>
+<p>主机主要使用modbus_slave_context_t结构体及 Modbus_Slave_Parse_Input函数。主要步骤如下:</p>
+<ul>
+<li>定义modbus_slave_context_t结构体,并填写相关成员(回调函数需自行定义，通常不可为NULL)。</li>
+<li>当串口接收到一帧数据时,调用 Modbus_Slave_Parse_Input函数。 </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

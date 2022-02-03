@@ -1,4 +1,12 @@
-﻿#include "Modbus.h"
+﻿/*!
+ *  \brief     Modbus RTU模式下数据包处理C源代码
+ *  \author    何亚红
+ *  \version   20220203
+ *  \date      2022
+ *  \copyright MIT License.
+ */
+
+#include "Modbus.h"
 
 static uint16_t Modbus_ReadUint16_From_2Bytes(uint8_t *pos)
 {
@@ -473,7 +481,7 @@ bool Modbus_Master_Read_OX(modbus_master_context_t *ctx,uint16_t start_addr,bool
     {
         if(Modbus_Payload_Check_CRC(buff,input_length))
         {
-            for(size_t i=0;i<number;i++)
+            for(size_t i=0; i<number; i++)
             {
                 data[i]=((buff[3+i/8]&(0x01<<(i%8)))!=0);
             }
@@ -519,7 +527,7 @@ bool Modbus_Master_Read_IX(modbus_master_context_t *ctx,uint16_t start_addr,bool
     {
         if(Modbus_Payload_Check_CRC(buff,input_length))
         {
-            for(size_t i=0;i<number;i++)
+            for(size_t i=0; i<number; i++)
             {
                 data[i]=((buff[3+i/8]&(0x01<<(i%8)))!=0);
             }
@@ -565,7 +573,7 @@ bool Modbus_Master_Read_Hold_Register(modbus_master_context_t *ctx,uint16_t star
     {
         if(Modbus_Payload_Check_CRC(buff,input_length))
         {
-            for(size_t i=0;i<number;i++)
+            for(size_t i=0; i<number; i++)
             {
                 data[i]=Modbus_ReadUint16_From_2Bytes(&buff[3+2*i]);
             }
@@ -611,7 +619,7 @@ bool Modbus_Master_Read_Input_Register(modbus_master_context_t *ctx,uint16_t sta
     {
         if(Modbus_Payload_Check_CRC(buff,input_length))
         {
-            for(size_t i=0;i<number;i++)
+            for(size_t i=0; i<number; i++)
             {
                 data[i]=Modbus_ReadUint16_From_2Bytes(&buff[3+2*i]);
             }
@@ -701,7 +709,7 @@ bool Modbus_Master_Write_OX(modbus_master_context_t *ctx,uint16_t start_addr,boo
         Modbus_WriteUint16_To_2Bytes(&buff[4],number);
         buff[6]=number/8+((number%8!=0)?1:0);
 
-        for(size_t i=0;i<number;i++)
+        for(size_t i=0; i<number; i++)
         {
             if(i%8==0)
             {
@@ -738,7 +746,7 @@ bool Modbus_Master_Write_OX(modbus_master_context_t *ctx,uint16_t start_addr,boo
 
 static bool Modbus_Master_Write_Hold_Register_06(modbus_master_context_t *ctx,uint16_t start_addr,uint16_t *data,size_t number,uint8_t *buff,size_t buff_length)
 {
-     if(ctx==NULL || data ==NULL || buff == NULL || number == 0 || buff_length == 0 || ctx->output ==NULL ||ctx->request_reply ==NULL)
+    if(ctx==NULL || data ==NULL || buff == NULL || number == 0 || buff_length == 0 || ctx->output ==NULL ||ctx->request_reply ==NULL)
     {
         //参数不正确
         return false;
@@ -805,9 +813,9 @@ bool Modbus_Master_Write_Hold_Register(modbus_master_context_t *ctx,uint16_t sta
         Modbus_WriteUint16_To_2Bytes(&buff[4],number);
         buff[6]=number*2;
 
-        for(size_t i=0;i<number;i++)
+        for(size_t i=0; i<number; i++)
         {
-           Modbus_WriteUint16_To_2Bytes(&buff[7+i*2],data[i]);
+            Modbus_WriteUint16_To_2Bytes(&buff[7+i*2],data[i]);
         }
 
         Modbus_Payload_Append_CRC(buff,output_length);

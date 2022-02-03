@@ -1,0 +1,46 @@
+[OPTIONS]
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x804 Chinese (PRC)
+Title=SimpleModbusRTUPacket
+
+[WINDOWS]
+main="SimpleModbusRTUPacket","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+_modbus_8c_source.html
+_modbus_8h_source.html
+_modbus_8c.html
+_modbus_8h.html
+_read_me_8md.html
+md__mnt_g__simple_modbus_r_t_u_packet__read_me.html
+structmodbus__master__context__t.html
+structmodbus__master__context__t-members.html
+structmodbus__slave__context__t.html
+structmodbus__slave__context__t-members.html
+index.html
+pages.html
+annotated.html
+classes.html
+functions.html
+functions_vars.html
+files.html
+globals.html
+globals_func.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+bdwn.png
+sync_on.png
+sync_off.png

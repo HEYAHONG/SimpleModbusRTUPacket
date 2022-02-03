@@ -34,3 +34,10 @@
 
 - 定义modbus_slave_context_t结构体,并填写相关成员(回调函数需自行定义，通常不可为NULL)。
 - 当串口接收到一帧数据时,调用 Modbus_Slave_Parse_Input函数。
+
+# Doxygen文档
+
+进入doc目录后，直接运行doxygen程序,可在output目录中得到最新的文档。
+
+已生成的文档见 [doc/html/index.html](doc/html/index.html)
+
