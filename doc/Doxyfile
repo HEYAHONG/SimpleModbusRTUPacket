@@ -167,8 +167,10 @@ FILE_PATTERNS          = *.c \
                          *.ucf \
                          *.qsf \
                          *.ice
-RECURSIVE              = NO
-EXCLUDE                =
+RECURSIVE              = YES
+EXCLUDE                = ../doc \
+			 ../build \
+			 ../tests \
 EXCLUDE_SYMLINKS       = NO
 EXCLUDE_PATTERNS       =
 EXCLUDE_SYMBOLS        =
