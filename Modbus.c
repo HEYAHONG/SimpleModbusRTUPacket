@@ -380,7 +380,7 @@ bool Modbus_Slave_Parse_Input(modbus_slave_context_t *ctx,uint8_t *input_data,si
 
             for(size_t i=0; i<length; i++)
             {
-                if((buff[7+i/8]&(0x01<<(i<<8)))!=0)
+                if((buff[7+i/8]&(0x01<<(i%8)))!=0)
                 {
                     ctx->write_OX(start_addr+i,0xFF00);
                 }

@@ -41,3 +41,53 @@
 
 已编译的文档见 [doc/html/index.chm](doc/html/index.chm)
 
+# 测试
+
+
+
+## 源代码下载
+
+由于本源代码包含第三方源代码,故直接下载可能有部分源代码缺失，需要通过以下方法解决:
+
+- 在进行git clone 使用--recurse-submodules参数。
+
+- 若已通过git clone下载,则在源代码目录中执行以下命令下载子模块:
+
+  ```bash
+   git submodule update --init --recursive
+  ```
+
+## 工具
+
+- VSPD：虚拟串口驱动
+- ModScan32：Modbus上位机软件
+
+## ModbusSlaveWin32
+
+Modbus从机测试,仅支持Windows。
+
+### 虚拟串口设置
+
+![VSPD](doc\tests\ModbusSlaveWin32\VSPD.PNG)
+
+### ModScan32测试结果
+
+![ModScan32_01](doc\tests\ModbusSlaveWin32\ModScan32_01.PNG)
+
+![ModScan32_02](doc\tests\ModbusSlaveWin32\ModScan32_02.PNG)
+
+![ModScan32_03](doc\tests\ModbusSlaveWin32\ModScan32_03.PNG)
+
+![ModScan32_04](doc\tests\ModbusSlaveWin32\ModScan32_04.PNG)
+
+![ModScan32_15_1](doc\tests\ModbusSlaveWin32\ModScan32_15_1.PNG)
+
+![ModScan32_15_2](doc\tests\ModbusSlaveWin32\ModScan32_15_2.PNG)
+
+![ModScan32_15_3](doc\tests\ModbusSlaveWin32\ModScan32_15_3.PNG)
+
+![ModScan32_16_1](doc\tests\ModbusSlaveWin32\ModScan32_16_1.PNG)
+
+![ModScan32_16_2](doc\tests\ModbusSlaveWin32\ModScan32_16_2.PNG)
+
+![ModScan32_16_3](doc\tests\ModbusSlaveWin32\ModScan32_16_3.PNG)

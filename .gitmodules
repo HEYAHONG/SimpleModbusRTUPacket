@@ -1,0 +1,6 @@
+[submodule "tests/ModbusSlaveWin32/3rdparty/SPinGW"]
+	path = tests/ModbusSlaveWin32/3rdparty/SPinGW
+	url = https://github.com/waynix/SPinGW.git
+[submodule "tests/ModbusSlaveWin32/3rdparty/argtable3"]
+	path = tests/ModbusSlaveWin32/3rdparty/argtable3
+	url = https://github.com/argtable/argtable3.git
