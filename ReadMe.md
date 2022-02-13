@@ -68,26 +68,26 @@ Modbus从机测试,仅支持Windows。
 
 ### 虚拟串口设置
 
-![VSPD](doc\tests\ModbusSlaveWin32\VSPD.PNG)
+![VSPD](doc/tests/ModbusSlaveWin32/VSPD.PNG)
 
 ### ModScan32测试结果
 
-![ModScan32_01](doc\tests\ModbusSlaveWin32\ModScan32_01.PNG)
+![ModScan32_01](doc/tests/ModbusSlaveWin32/ModScan32_01.PNG)
 
-![ModScan32_02](doc\tests\ModbusSlaveWin32\ModScan32_02.PNG)
+![ModScan32_02](doc/tests/ModbusSlaveWin32/ModScan32_02.PNG)
 
-![ModScan32_03](doc\tests\ModbusSlaveWin32\ModScan32_03.PNG)
+![ModScan32_03](doc/tests/ModbusSlaveWin32/ModScan32_03.PNG)
 
-![ModScan32_04](doc\tests\ModbusSlaveWin32\ModScan32_04.PNG)
+![ModScan32_04](doc/tests/ModbusSlaveWin32/ModScan32_04.PNG)
 
-![ModScan32_15_1](doc\tests\ModbusSlaveWin32\ModScan32_15_1.PNG)
+![ModScan32_15_1](doc/tests/ModbusSlaveWin32/ModScan32_15_1.PNG)
 
-![ModScan32_15_2](doc\tests\ModbusSlaveWin32\ModScan32_15_2.PNG)
+![ModScan32_15_2](doc/tests/ModbusSlaveWin32/ModScan32_15_2.PNG)
 
-![ModScan32_15_3](doc\tests\ModbusSlaveWin32\ModScan32_15_3.PNG)
+![ModScan32_15_3](doc/tests/ModbusSlaveWin32/ModScan32_15_3.PNG)
 
-![ModScan32_16_1](doc\tests\ModbusSlaveWin32\ModScan32_16_1.PNG)
+![ModScan32_16_1](doc/tests/ModbusSlaveWin32/ModScan32_16_1.PNG)
 
-![ModScan32_16_2](doc\tests\ModbusSlaveWin32\ModScan32_16_2.PNG)
+![ModScan32_16_2](doc/tests/ModbusSlaveWin32/ModScan32_16_2.PNG)
 
-![ModScan32_16_3](doc\tests\ModbusSlaveWin32\ModScan32_16_3.PNG)
+![ModScan32_16_3](doc/tests/ModbusSlaveWin32/ModScan32_16_3.PNG)
