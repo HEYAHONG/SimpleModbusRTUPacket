@@ -62,6 +62,12 @@
 - VSPD：虚拟串口驱动
 - ModScan32：Modbus上位机软件
 
+## 编译
+
+本测试均在MSYS2环境下使用CMake编译,可直接进入相应测试程序目录使用CMake编译。
+
+注意:需要安装对应环境的GCC编译器、CMake、make(或者ninja)等
+
 ## ModbusSlaveWin32
 
 Modbus从机测试,仅支持Windows。
@@ -91,3 +97,20 @@ Modbus从机测试,仅支持Windows。
 ![ModScan32_16_2](doc/tests/ModbusSlaveWin32/ModScan32_16_2.PNG)
 
 ![ModScan32_16_3](doc/tests/ModbusSlaveWin32/ModScan32_16_3.PNG)
+
+
+
+## ModbusMasterTestWin32
+
+主机测试,仅支持Windows。需要ModbusSlaveWin32。
+
+对于主机模式的Modbus,通常采用更加强大的[libmodbus](https://github.com/stephane/libmodbus.git)库,本库仅用于简易使用。
+
+### 虚拟串口设置
+
+![VSPD](doc/tests/ModbusMasterTestWin32/VSPD.PNG)
+
+### 测试结果
+
+![ModbusMasterTestWin32](doc/tests/ModbusMasterTestWin32/ModbusMasterTestWin32.PNG)
+
