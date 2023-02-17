@@ -458,6 +458,11 @@ bool Modbus_Master_Read_OX(modbus_master_context_t *ctx,uint16_t start_addr,bool
         return false;
     }
 
+    if(number > MODBUS_MAX_READ_BITS)
+    {
+        return false;
+    }
+
     size_t output_length=8;
     size_t input_length=5+number/8+((number%8==0)?0:1);
 
@@ -501,6 +506,11 @@ bool Modbus_Master_Read_IX(modbus_master_context_t *ctx,uint16_t start_addr,bool
     if(ctx==NULL || data ==NULL || buff == NULL || number == 0 || buff_length == 0 || ctx->output ==NULL ||ctx->request_reply ==NULL)
     {
         //参数不正确
+        return false;
+    }
+
+    if(number > MODBUS_MAX_READ_BITS)
+    {
         return false;
     }
 
@@ -550,6 +560,11 @@ bool Modbus_Master_Read_Hold_Register(modbus_master_context_t *ctx,uint16_t star
         return false;
     }
 
+    if(number > MODBUS_MAX_READ_REGISTERS)
+    {
+        return false;
+    }
+
     size_t output_length=8;
     size_t input_length=5+number*2;
 
@@ -593,6 +608,11 @@ bool Modbus_Master_Read_Input_Register(modbus_master_context_t *ctx,uint16_t sta
     if(ctx==NULL || data ==NULL || buff == NULL || number == 0 || buff_length == 0 || ctx->output ==NULL ||ctx->request_reply ==NULL)
     {
         //参数不正确
+        return false;
+    }
+
+    if(number > MODBUS_MAX_READ_REGISTERS)
+    {
         return false;
     }
 
@@ -685,6 +705,11 @@ bool Modbus_Master_Write_OX(modbus_master_context_t *ctx,uint16_t start_addr,boo
     if(ctx==NULL || data ==NULL || buff == NULL || number == 0 || buff_length == 0 || ctx->output ==NULL ||ctx->request_reply ==NULL)
     {
         //参数不正确
+        return false;
+    }
+
+    if(number > MODBUS_MAX_WRITE_BITS)
+    {
         return false;
     }
 
@@ -789,6 +814,11 @@ bool Modbus_Master_Write_Hold_Register(modbus_master_context_t *ctx,uint16_t sta
     if(ctx==NULL || data ==NULL || buff == NULL || number == 0 || buff_length == 0 || ctx->output ==NULL ||ctx->request_reply ==NULL)
     {
         //参数不正确
+        return false;
+    }
+
+    if(number > MODBUS_MAX_WRITE_REGISTERS)
+    {
         return false;
     }
 
