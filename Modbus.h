@@ -19,6 +19,37 @@
 extern "C" {
 #endif
 
+#define MODBUS_BROADCAST_ADDRESS 0
+
+/* Modbus_Application_Protocol_V1_1b.pdf (chapter 6 section 1 page 12)
+ * Quantity of Coils to read (2 bytes): 1 to 2000 (0x7D0)
+ * (chapter 6 section 11 page 29)
+ * Quantity of Coils to write (2 bytes): 1 to 1968 (0x7B0)
+ */
+#define MODBUS_MAX_READ_BITS  2000
+#define MODBUS_MAX_WRITE_BITS 1968
+
+/* Modbus_Application_Protocol_V1_1b.pdf (chapter 6 section 3 page 15)
+ * Quantity of Registers to read (2 bytes): 1 to 125 (0x7D)
+ * (chapter 6 section 12 page 31)
+ * Quantity of Registers to write (2 bytes) 1 to 123 (0x7B)
+ * (chapter 6 section 17 page 38)
+ * Quantity of Registers to write in R/W registers (2 bytes) 1 to 121 (0x79)
+ */
+#define MODBUS_MAX_READ_REGISTERS     125
+#define MODBUS_MAX_WRITE_REGISTERS    123
+#define MODBUS_MAX_WR_WRITE_REGISTERS 121
+#define MODBUS_MAX_WR_READ_REGISTERS  125
+
+/* The size of the MODBUS PDU is limited by the size constraint inherited from
+ * the first MODBUS implementation on Serial Line network (max. RS485 ADU = 256
+ * bytes). Therefore, MODBUS PDU for serial line communication = 256 - Server
+ * address (1 byte) - CRC (2 bytes) = 253 bytes.
+ */
+#define MODBUS_MAX_PDU_LENGTH 253
+
+
+
 /** \brief 检查一帧数据的crc
  *
  * \param payload 整帧数据(包含CRC)的指针
