@@ -1,12 +1,6 @@
-[submodule "tests/ModbusSlaveWin32/3rdparty/SPinGW"]
-	path = tests/ModbusSlaveWin32/3rdparty/SPinGW
-	url = https://github.com/waynix/SPinGW.git
-[submodule "tests/ModbusSlaveWin32/3rdparty/argtable3"]
-	path = tests/ModbusSlaveWin32/3rdparty/argtable3
-	url = https://github.com/argtable/argtable3.git
-[submodule "tests/ModbusMasterTestWin32/3rdparty/SPinGW"]
-	path = tests/ModbusMasterTestWin32/3rdparty/SPinGW
-	url = https://github.com/waynix/SPinGW.git
-[submodule "tests/ModbusMasterTestWin32/3rdparty/argtable3"]
-	path = tests/ModbusMasterTestWin32/3rdparty/argtable3
-	url = https://github.com/argtable/argtable3.git
+[submodule "tests/3rdparty/SPinGW"]
+	path = tests/3rdparty/SPinGW
+	url = ../../HEYAHONG/SPinGW
+[submodule "tests/3rdparty/argtable3"]
+	path = tests/3rdparty/argtable3
+	url = ../../HEYAHONG/argtable3
