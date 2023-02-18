@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.14)
 
 project(ModbusMasterTestWin32 C CXX ASM)
 
@@ -21,6 +21,12 @@ target_include_directories(ModbusMasterTestWin32 PRIVATE ../3rdparty/argtable3/s
 #添加线程库
 FIND_PACKAGE(Threads REQUIRED)
 TARGET_LINK_LIBRARIES(ModbusMasterTestWin32  ${CMAKE_THREAD_LIBS_INIT})
+
+#支持MSYS直接编译
+if(MSYS)
+set(WIN32 ON)
+endif()
+
 
 #添加串口库
 if(WIN32)

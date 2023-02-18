@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.14)
 
 project(ModbusSlaveWin32 C CXX ASM)
 
@@ -21,6 +21,11 @@ target_include_directories(ModbusSlaveWin32 PRIVATE ../3rdparty/argtable3/src)
 #添加线程库
 FIND_PACKAGE(Threads REQUIRED)
 TARGET_LINK_LIBRARIES(ModbusSlaveWin32  ${CMAKE_THREAD_LIBS_INIT})
+
+#支持MSYS直接编译
+if(MSYS)
+set(WIN32 ON)
+endif()
 
 #添加串口库
 if(WIN32)
