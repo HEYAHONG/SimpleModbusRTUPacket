@@ -49,6 +49,11 @@ extern "C" {
 #define MODBUS_MAX_PDU_LENGTH 253
 
 
+/* Modbus_Application_Protocol_V1_1b.pdf Chapter 4 Section 1 Page 5
+ * RS232 / RS485 ADU = 253 bytes + slave (1 byte) + CRC (2 bytes) = 256 bytes
+ */
+#define MODBUS_RTU_MAX_ADU_LENGTH 256
+
 
 /** \brief 检查一帧数据的crc
  *
