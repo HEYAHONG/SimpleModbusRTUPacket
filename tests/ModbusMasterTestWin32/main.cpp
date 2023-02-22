@@ -1,5 +1,6 @@
 ﻿#include "argtable3.h"
 #include "Modbus.h"
+#include <string>
 
 extern "C"
 {
@@ -80,15 +81,20 @@ int main(int argc,char *argv[])
     argtable_parse_arg(argc,argv);
 
 
+    std::string comport=(*argcom->sval);
+    if(comport.find("\\\\.\\")==std::string::npos)
+    {
+        comport=std::string("\\\\.\\")+comport;
+    }
     //打开串口
-    if((ComHandle=openSerialPort(*argcom->sval,B115200,one,off))==INVALID_HANDLE_VALUE)
+    if((ComHandle=openSerialPort(comport.c_str(),B115200,one,off))==INVALID_HANDLE_VALUE)
     {
         printf("打开串口失败!\r\n");
         exit(0);
     }
     else
     {
-        printf("打开串口%s成功!\r\n",*argcom->sval);
+        printf("打开串口%s成功!\r\n",comport.c_str());
     }
 
     //初始化modbus上下文

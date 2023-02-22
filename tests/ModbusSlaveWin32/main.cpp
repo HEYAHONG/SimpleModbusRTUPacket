@@ -1,5 +1,7 @@
 ﻿#include "argtable3.h"
 #include "Modbus.h"
+#include <string>
+#include <map>
 
 extern "C"
 {
@@ -62,21 +64,34 @@ bool mb_read_IX(size_t addr)
     return (addr%2)==1;//奇数为真，偶数为假。
 }
 
+
+std::map<size_t,bool> OX_map;
 //写输出线圈
 void mb_write_OX(size_t addr, uint16_t data)
 {
     printf("写输出线圈:%d=%d\r\n",addr,data);
+    OX_map[addr]=(data!=0);
 }
 
 //读输出线圈
 bool mb_read_OX(size_t addr)
 {
+    if(OX_map.find(addr)!=OX_map.end())
+    {
+        return OX_map[addr];
+    }
     return (addr%2)==0;//奇数为假，偶数为真。
 }
 
+
+std::map<size_t,uint16_t> HoldRegister_map;
 //读保持寄存器
 uint16_t mb_read_hold_register(size_t addr)
 {
+    if(HoldRegister_map.find(addr)!=HoldRegister_map.end())
+    {
+        return HoldRegister_map[addr];
+    }
     return addr;//返回地址
 }
 
@@ -84,6 +99,7 @@ uint16_t mb_read_hold_register(size_t addr)
 void mb_write_hold_register(size_t addr, uint16_t data)
 {
     printf("写保持寄存器:%d=%d\r\n",addr,data);
+    HoldRegister_map[addr]=data;
 }
 
 //读输入寄存器
@@ -104,16 +120,20 @@ int main(int argc,char *argv[])
     //检查命令参数
     argtable_parse_arg(argc,argv);
 
-
+    std::string comport=(*argcom->sval);
+    if(comport.find("\\\\.\\")==std::string::npos)
+    {
+        comport=std::string("\\\\.\\")+comport;
+    }
     //打开串口
-    if((ComHandle=openSerialPort(*argcom->sval,B115200,one,off))==INVALID_HANDLE_VALUE)
+    if((ComHandle=openSerialPort(comport.c_str(),B115200,one,off))==INVALID_HANDLE_VALUE)
     {
         printf("打开串口失败!\r\n");
         exit(0);
     }
     else
     {
-        printf("打开串口%s成功!\r\n",*argcom->sval);
+        printf("打开串口%s成功!\r\n",comport.c_str());
     }
 
     //初始化modbus上下文
