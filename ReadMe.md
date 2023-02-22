@@ -125,6 +125,8 @@ Modbus从机测试,仅支持Windows。
 
 对于主机模式的Modbus,通常采用更加强大的[libmodbus](https://github.com/stephane/libmodbus.git)库,本库仅用于简易使用。
 
+若需GUI版的测试程序，请使用[ cutecom-ng（个人修改版）](https://github.com/HEYAHONG/cutecom-ng)。
+
 ### 虚拟串口设置
 
 ![VSPD](doc/tests/ModbusMasterTestWin32/VSPD.PNG)
