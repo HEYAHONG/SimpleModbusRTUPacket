@@ -27,6 +27,10 @@ if(MSYS)
 set(WIN32 ON)
 endif()
 
+#支持CYGWIN编译
+if(CYGWIN)
+set(WIN32 ON)
+endif()
 
 #添加串口库
 if(WIN32)
