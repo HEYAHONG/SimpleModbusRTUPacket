@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SimpleModbusRTUPacket: 首页</title>
+<title>SimpleModbusRTUPacket: 说明</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,8 +16,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">SimpleModbusRTUPacket
    </div>
   </td>
@@ -26,28 +26,72 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',false,false,'search.php','搜索');
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+<!-- 制作者 Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
-<div class="header">
-  <div class="headertitle">
-<div class="title">SimpleModbusRTUPacket 文档</div>  </div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">说明 </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_mainpage"></a> 极其简易的Modbus-RTU模式数据包处理。</p>
+<p>一般用于单片机，本代码只包含数据包处理程序，时序部分需要在单片机其它代码中实现。</p>
+<p>特点如下:</p>
+<ul>
+<li>代码极其简易，便于移植。</li>
+<li>可用于各类带硬件串口的单片机。</li>
+<li>使用简单</li>
+</ul>
+<p>缺陷:</p>
+<ul>
+<li>串口驱动以及Modbus时序需要自行编写。</li>
+<li>未进行某些检查。</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1"></a>
+使用</h1>
+<p>注意事项:</p>
+<ul>
+<li>本代码中的地址都是从0开始的，但Modbus标准协议中地址规定是从1(数据帧中仍然是从0开始)开始。</li>
+<li><p class="startli">所有需要缓冲的函数需要的缓冲推荐分配在栈上,因此在操作系统中需要将任务栈分配到足够大（若可以实现的话），对于一个经典的Modbus任务来讲，至少应当在其它需要的基础上额外分配256字节的栈空间专门用于接收与发送缓冲。可采用以下代码定义缓冲：</p>
+<div class="fragment"><div class="line">{c++}</div>
+<div class="line"> /*</div>
+<div class="line"> 源代码文件应包含Modbus.h</div>
+<div class="line"> */</div>
+<div class="line"> #include &quot;Modbus.h&quot;</div>
+<div class="line"> </div>
+<div class="line"> /*</div>
+<div class="line"> 在需要调用Modbus函数时定义缓冲</div>
+<div class="line"> */</div>
+<div class="line"> uint8_t buff[MODBUS_RTU_MAX_ADU_LENGTH];</div>
+<div class="line"> /*</div>
+<div class="line"> 定义好缓冲后，即可使用buff作为调用函数的buff参数，sizeof(buff)作为调用函数的buff_length参数。</div>
+<div class="line"> */</div>
+</div><!-- fragment --></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+主机</h2>
+<p>主机主要使用 <a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> 结构体及 Modbus_Master开头的函数。主要步骤如下:</p>
+<ul>
+<li>定义 <a class="el" href="structmodbus__master__context__t.html">modbus_master_context_t</a> 结构体,并填写相关成员(回调函数需自行定义，通常不可为NULL)。</li>
+<li>当需要请求数据时,调用Modbus_Master系列函数。</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+从机</h2>
+<p>主机主要使用 <a class="el" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a> 结构体及 Modbus_Slave_Parse_Input 函数。主要步骤如下:</p>
+<ul>
+<li>定义 <a class="el" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a> 结构体,并填写相关成员(回调函数需自行定义，通常不可为NULL)。</li>
+<li>当串口接收到一帧数据时,调用 Modbus_Slave_Parse_Input 函数。 </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

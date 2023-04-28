@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SimpleModbusRTUPacket: Modbus.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -16,8 +16,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">SimpleModbusRTUPacket
    </div>
   </td>
@@ -26,118 +26,155 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',false,false,'search.php','搜索');
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+<!-- 制作者 Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">Modbus.h</div>  </div>
+  <div class="headertitle"><div class="title">Modbus.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_modbus_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __MODBUS_H__</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __MODBUS_H__</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;stdint.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;stdbool.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;string.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#a8e9d9d60333abcc37fe04d9353d1bcd3">Modbus_Payload_Check_CRC</a>(uint8_t *payload,<span class="keywordtype">size_t</span> payload_length);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#af35d2d5cac75013dbff44ddf7c5524d3">Modbus_Payload_Append_CRC</a>(uint8_t *payload,<span class="keywordtype">size_t</span> payload_length);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html">   43</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#ac41e4cb335390a1395bf4f012604a74e">   47</a></span>&#160;    uint8_t <a class="code" href="structmodbus__slave__context__t.html#ac41e4cb335390a1395bf4f012604a74e">slave_addr</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a6ecebe6b25f434be745b133d575d0184">   56</a></span>&#160;    void (*output)(uint8_t *data,<span class="keywordtype">size_t</span> data_length);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a13a973f81370107853a7566b4c84b840">   64</a></span>&#160;    bool (*read_IX)(<span class="keywordtype">size_t</span> addr);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#ac3ae0ffa4d858b84c7b1f4a6a575afc1">   73</a></span>&#160;    void (*write_OX)(<span class="keywordtype">size_t</span> addr,uint16_t data);</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a85d391ebbc76b36a23b15c5909be65fe">   80</a></span>&#160;    bool (*read_OX)(<span class="keywordtype">size_t</span> addr);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#abee90354d50e25e1aed184573eec44a4">   88</a></span>&#160;    uint16_t (*read_hold_register)(<span class="keywordtype">size_t</span> addr);</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a6f4342c6fd0562ae717fb64a12cf11c5">   96</a></span>&#160;    void (*write_hold_register)(<span class="keywordtype">size_t</span> addr,uint16_t data);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#af3f831b8fea5fc21a7692f1ff7e7122c">  104</a></span>&#160;    uint16_t (*read_input_register)(<span class="keywordtype">size_t</span> addr);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <a class="code" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#a74909e13218e10cf373ee2905f4c1f9a">Modbus_Slave_Parse_Input</a>(<a class="code" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a> *ctx,uint8_t *input_data,<span class="keywordtype">size_t</span> input_data_length,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html">  125</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html#a46a3ed8e094aa3f7937fc19e3362d6fd">  127</a></span>&#160;    uint8_t <a class="code" href="structmodbus__master__context__t.html#a46a3ed8e094aa3f7937fc19e3362d6fd">slave_addr</a>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html#ae6831967792a33d6980e3a006141d806">  136</a></span>&#160;    void (*output)(uint8_t *data,<span class="keywordtype">size_t</span> data_length);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html#aa7d29db6de7fb9521c26dd52c552d9a7">  146</a></span>&#160;    size_t (*request_reply)(uint8_t *data,<span class="keywordtype">size_t</span> data_length);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;} <a class="code" href="structmodbus__master__context__t.html">modbus_master_context_t</a>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#a7ef99e16b9b8f1c63edb8d7d7bbfc7ad">Modbus_Master_Read_IX</a>(<a class="code" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,<span class="keywordtype">bool</span> *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#a45e4ab8aa23879aff37ea238f5f8f35c">Modbus_Master_Read_OX</a>(<a class="code" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,<span class="keywordtype">bool</span> *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#ab9127c175d12c178db8bb57b4d92e8c9">Modbus_Master_Read_Hold_Register</a>(<a class="code" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,uint16_t *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#ab3ffc37e7928254e715c1ef5e177caa3">Modbus_Master_Read_Input_Register</a>(<a class="code" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,uint16_t *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#a601985cfdfebcfa95ca9129cb0b9ea7d">Modbus_Master_Write_OX</a>(<a class="code" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,<span class="keywordtype">bool</span> *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_modbus_8h.html#a4f51946ea8b2ddc288d82b111b075551">Modbus_Master_Write_Hold_Register</a>(<a class="code" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,uint16_t *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-</div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructmodbus__master__context__t_html_a46a3ed8e094aa3f7937fc19e3362d6fd"><div class="ttname"><a href="structmodbus__master__context__t.html#a46a3ed8e094aa3f7937fc19e3362d6fd">modbus_master_context_t::slave_addr</a></div><div class="ttdeci">uint8_t slave_addr</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00127">Modbus.h:127</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_af35d2d5cac75013dbff44ddf7c5524d3"><div class="ttname"><a href="_modbus_8h.html#af35d2d5cac75013dbff44ddf7c5524d3">Modbus_Payload_Append_CRC</a></div><div class="ttdeci">bool Modbus_Payload_Append_CRC(uint8_t *payload, size_t payload_length)</div><div class="ttdoc">在数据帧末尾的添加crc校验</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00071">Modbus.c:71</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_ab3ffc37e7928254e715c1ef5e177caa3"><div class="ttname"><a href="_modbus_8h.html#ab3ffc37e7928254e715c1ef5e177caa3">Modbus_Master_Read_Input_Register</a></div><div class="ttdeci">bool Modbus_Master_Read_Input_Register(modbus_master_context_t *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机读取输入寄存器</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00591">Modbus.c:591</a></div></div>
-<div class="ttc" id="astructmodbus__master__context__t_html"><div class="ttname"><a href="structmodbus__master__context__t.html">modbus_master_context_t</a></div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00125">Modbus.h:125</a></div></div>
-<div class="ttc" id="astructmodbus__slave__context__t_html_ac41e4cb335390a1395bf4f012604a74e"><div class="ttname"><a href="structmodbus__slave__context__t.html#ac41e4cb335390a1395bf4f012604a74e">modbus_slave_context_t::slave_addr</a></div><div class="ttdeci">uint8_t slave_addr</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00047">Modbus.h:47</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_ab9127c175d12c178db8bb57b4d92e8c9"><div class="ttname"><a href="_modbus_8h.html#ab9127c175d12c178db8bb57b4d92e8c9">Modbus_Master_Read_Hold_Register</a></div><div class="ttdeci">bool Modbus_Master_Read_Hold_Register(modbus_master_context_t *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机读取保持寄存器</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00545">Modbus.c:545</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_a8e9d9d60333abcc37fe04d9353d1bcd3"><div class="ttname"><a href="_modbus_8h.html#a8e9d9d60333abcc37fe04d9353d1bcd3">Modbus_Payload_Check_CRC</a></div><div class="ttdeci">bool Modbus_Payload_Check_CRC(uint8_t *payload, size_t payload_length)</div><div class="ttdoc">检查一帧数据的crc</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00052">Modbus.c:52</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_a601985cfdfebcfa95ca9129cb0b9ea7d"><div class="ttname"><a href="_modbus_8h.html#a601985cfdfebcfa95ca9129cb0b9ea7d">Modbus_Master_Write_OX</a></div><div class="ttdeci">bool Modbus_Master_Write_OX(modbus_master_context_t *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机写输出线圈</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00683">Modbus.c:683</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_a7ef99e16b9b8f1c63edb8d7d7bbfc7ad"><div class="ttname"><a href="_modbus_8h.html#a7ef99e16b9b8f1c63edb8d7d7bbfc7ad">Modbus_Master_Read_IX</a></div><div class="ttdeci">bool Modbus_Master_Read_IX(modbus_master_context_t *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机读取输入点</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00499">Modbus.c:499</a></div></div>
-<div class="ttc" id="astructmodbus__slave__context__t_html"><div class="ttname"><a href="structmodbus__slave__context__t.html">modbus_slave_context_t</a></div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00043">Modbus.h:43</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_a4f51946ea8b2ddc288d82b111b075551"><div class="ttname"><a href="_modbus_8h.html#a4f51946ea8b2ddc288d82b111b075551">Modbus_Master_Write_Hold_Register</a></div><div class="ttdeci">bool Modbus_Master_Write_Hold_Register(modbus_master_context_t *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机写保持寄存器</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00787">Modbus.c:787</a></div></div>
-<div class="ttc" id="a_modbus_8h_html_a74909e13218e10cf373ee2905f4c1f9a"><div class="ttname"><a href="_modbus_8h.html#a74909e13218e10cf373ee2905f4c1f9a">Modbus_Slave_Parse_Input</a></div><div class="ttdeci">bool Modbus_Slave_Parse_Input(modbus_slave_context_t *ctx, uint8_t *input_data, size_t input_data_length, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus从机解析输入。 当从机接收到一帧数据后，调用此函数。 此函数会自动调用相关回调函数完成Modbus输出。</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00090">Modbus.c:90</a></div></div>
+<a href="_modbus_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __MODBUS_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __MODBUS_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;stdint.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;stdbool.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;string.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_modbus_8h.html#ae7e7b3815bbb3021c65250bf30c7eead">   22</a></span><span class="preprocessor">#define MODBUS_BROADCAST_ADDRESS 0</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">/* Modbus_Application_Protocol_V1_1b.pdf (chapter 6 section 1 page 12)</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * Quantity of Coils to read (2 bytes): 1 to 2000 (0x7D0)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (chapter 6 section 11 page 29)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * Quantity of Coils to write (2 bytes): 1 to 1968 (0x7B0)</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_modbus_8h.html#aded271a08d136b51971485277d78a8af">   29</a></span><span class="preprocessor">#define MODBUS_MAX_READ_BITS  2000</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_modbus_8h.html#adb7b804ccb24b62f52ccbbb7a34de937">   30</a></span><span class="preprocessor">#define MODBUS_MAX_WRITE_BITS 1968</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/* Modbus_Application_Protocol_V1_1b.pdf (chapter 6 section 3 page 15)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> * Quantity of Registers to read (2 bytes): 1 to 125 (0x7D)</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> * (chapter 6 section 12 page 31)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Quantity of Registers to write (2 bytes) 1 to 123 (0x7B)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> * (chapter 6 section 17 page 38)</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> * Quantity of Registers to write in R/W registers (2 bytes) 1 to 121 (0x79)</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="_modbus_8h.html#a1416786bae76c8ec6c36c84e2c2a37e5">   39</a></span><span class="preprocessor">#define MODBUS_MAX_READ_REGISTERS     125</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="_modbus_8h.html#aefdc94533724fa3eb7fab696f1e7a9f3">   40</a></span><span class="preprocessor">#define MODBUS_MAX_WRITE_REGISTERS    123</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="_modbus_8h.html#a9187bdda1f668ab130ecf63c90ab900a">   41</a></span><span class="preprocessor">#define MODBUS_MAX_WR_WRITE_REGISTERS 121</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_modbus_8h.html#afb5fe129d407a1cb533c18c8c18830ea">   42</a></span><span class="preprocessor">#define MODBUS_MAX_WR_READ_REGISTERS  125</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/* The size of the MODBUS PDU is limited by the size constraint inherited from</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> * the first MODBUS implementation on Serial Line network (max. RS485 ADU = 256</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"> * bytes). Therefore, MODBUS PDU for serial line communication = 256 - Server</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> * address (1 byte) - CRC (2 bytes) = 253 bytes.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_modbus_8h.html#a1553e1ba87ae85931b4686f1f4580b46">   49</a></span><span class="preprocessor">#define MODBUS_MAX_PDU_LENGTH 253</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">/* Modbus_Application_Protocol_V1_1b.pdf Chapter 4 Section 1 Page 5</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"> * RS232 / RS485 ADU = 253 bytes + slave (1 byte) + CRC (2 bytes) = 256 bytes</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_modbus_8h.html#a7ca5dff65aa7317572091b62c7e5ee89">   55</a></span><span class="preprocessor">#define MODBUS_RTU_MAX_ADU_LENGTH 256</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#a8e9d9d60333abcc37fe04d9353d1bcd3">Modbus_Payload_Check_CRC</a>(uint8_t *payload,<span class="keywordtype">size_t</span> payload_length);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#af35d2d5cac75013dbff44ddf7c5524d3">Modbus_Payload_Append_CRC</a>(uint8_t *payload,<span class="keywordtype">size_t</span> payload_length);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html">   79</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#ac41e4cb335390a1395bf4f012604a74e">   83</a></span>    uint8_t <a class="code hl_variable" href="structmodbus__slave__context__t.html#ac41e4cb335390a1395bf4f012604a74e">slave_addr</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a6ecebe6b25f434be745b133d575d0184">   92</a></span>    void (*output)(uint8_t *data,<span class="keywordtype">size_t</span> data_length);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a13a973f81370107853a7566b4c84b840">  100</a></span>    bool (*read_IX)(<span class="keywordtype">size_t</span> addr);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#ac3ae0ffa4d858b84c7b1f4a6a575afc1">  109</a></span>    void (*write_OX)(<span class="keywordtype">size_t</span> addr,uint16_t data);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a85d391ebbc76b36a23b15c5909be65fe">  116</a></span>    bool (*read_OX)(<span class="keywordtype">size_t</span> addr);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#abee90354d50e25e1aed184573eec44a4">  124</a></span>    uint16_t (*read_hold_register)(<span class="keywordtype">size_t</span> addr);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#a6f4342c6fd0562ae717fb64a12cf11c5">  132</a></span>    void (*write_hold_register)(<span class="keywordtype">size_t</span> addr,uint16_t data);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="structmodbus__slave__context__t.html#af3f831b8fea5fc21a7692f1ff7e7122c">  140</a></span>    uint16_t (*read_input_register)(<span class="keywordtype">size_t</span> addr);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>} <a class="code hl_struct" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#a74909e13218e10cf373ee2905f4c1f9a">Modbus_Slave_Parse_Input</a>(<a class="code hl_struct" href="structmodbus__slave__context__t.html">modbus_slave_context_t</a> *ctx,uint8_t *input_data,<span class="keywordtype">size_t</span> input_data_length,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html">  161</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>{</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html#a46a3ed8e094aa3f7937fc19e3362d6fd">  163</a></span>    uint8_t <a class="code hl_variable" href="structmodbus__master__context__t.html#a46a3ed8e094aa3f7937fc19e3362d6fd">slave_addr</a>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html#ae6831967792a33d6980e3a006141d806">  172</a></span>    void (*output)(uint8_t *data,<span class="keywordtype">size_t</span> data_length);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="structmodbus__master__context__t.html#aa7d29db6de7fb9521c26dd52c552d9a7">  182</a></span>    size_t (*request_reply)(uint8_t *data,<span class="keywordtype">size_t</span> data_length);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>} <a class="code hl_struct" href="structmodbus__master__context__t.html">modbus_master_context_t</a>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#a7ef99e16b9b8f1c63edb8d7d7bbfc7ad">Modbus_Master_Read_IX</a>(<a class="code hl_struct" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,<span class="keywordtype">bool</span> *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#a45e4ab8aa23879aff37ea238f5f8f35c">Modbus_Master_Read_OX</a>(<a class="code hl_struct" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,<span class="keywordtype">bool</span> *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#ab9127c175d12c178db8bb57b4d92e8c9">Modbus_Master_Read_Hold_Register</a>(<a class="code hl_struct" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,uint16_t *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#ab3ffc37e7928254e715c1ef5e177caa3">Modbus_Master_Read_Input_Register</a>(<a class="code hl_struct" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,uint16_t *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#a601985cfdfebcfa95ca9129cb0b9ea7d">Modbus_Master_Write_OX</a>(<a class="code hl_struct" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,<span class="keywordtype">bool</span> *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_modbus_8h.html#a4f51946ea8b2ddc288d82b111b075551">Modbus_Master_Write_Hold_Register</a>(<a class="code hl_struct" href="structmodbus__master__context__t.html">modbus_master_context_t</a> *ctx,uint16_t start_addr,uint16_t *data,<span class="keywordtype">size_t</span> number,uint8_t *buff,<span class="keywordtype">size_t</span> buff_length);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
 <div class="ttc" id="a_modbus_8h_html_a45e4ab8aa23879aff37ea238f5f8f35c"><div class="ttname"><a href="_modbus_8h.html#a45e4ab8aa23879aff37ea238f5f8f35c">Modbus_Master_Read_OX</a></div><div class="ttdeci">bool Modbus_Master_Read_OX(modbus_master_context_t *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机读取输出线圈</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00453">Modbus.c:453</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_a4f51946ea8b2ddc288d82b111b075551"><div class="ttname"><a href="_modbus_8h.html#a4f51946ea8b2ddc288d82b111b075551">Modbus_Master_Write_Hold_Register</a></div><div class="ttdeci">bool Modbus_Master_Write_Hold_Register(modbus_master_context_t *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机写保持寄存器</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00812">Modbus.c:812</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_a601985cfdfebcfa95ca9129cb0b9ea7d"><div class="ttname"><a href="_modbus_8h.html#a601985cfdfebcfa95ca9129cb0b9ea7d">Modbus_Master_Write_OX</a></div><div class="ttdeci">bool Modbus_Master_Write_OX(modbus_master_context_t *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机写输出线圈</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00703">Modbus.c:703</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_a74909e13218e10cf373ee2905f4c1f9a"><div class="ttname"><a href="_modbus_8h.html#a74909e13218e10cf373ee2905f4c1f9a">Modbus_Slave_Parse_Input</a></div><div class="ttdeci">bool Modbus_Slave_Parse_Input(modbus_slave_context_t *ctx, uint8_t *input_data, size_t input_data_length, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus从机解析输入。 当从机接收到一帧数据后，调用此函数。 此函数会自动调用相关回调函数完成Modbus输出。</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00090">Modbus.c:90</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_a7ef99e16b9b8f1c63edb8d7d7bbfc7ad"><div class="ttname"><a href="_modbus_8h.html#a7ef99e16b9b8f1c63edb8d7d7bbfc7ad">Modbus_Master_Read_IX</a></div><div class="ttdeci">bool Modbus_Master_Read_IX(modbus_master_context_t *ctx, uint16_t start_addr, bool *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机读取输入点</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00504">Modbus.c:504</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_a8e9d9d60333abcc37fe04d9353d1bcd3"><div class="ttname"><a href="_modbus_8h.html#a8e9d9d60333abcc37fe04d9353d1bcd3">Modbus_Payload_Check_CRC</a></div><div class="ttdeci">bool Modbus_Payload_Check_CRC(uint8_t *payload, size_t payload_length)</div><div class="ttdoc">检查一帧数据的crc</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00052">Modbus.c:52</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_ab3ffc37e7928254e715c1ef5e177caa3"><div class="ttname"><a href="_modbus_8h.html#ab3ffc37e7928254e715c1ef5e177caa3">Modbus_Master_Read_Input_Register</a></div><div class="ttdeci">bool Modbus_Master_Read_Input_Register(modbus_master_context_t *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机读取输入寄存器</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00606">Modbus.c:606</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_ab9127c175d12c178db8bb57b4d92e8c9"><div class="ttname"><a href="_modbus_8h.html#ab9127c175d12c178db8bb57b4d92e8c9">Modbus_Master_Read_Hold_Register</a></div><div class="ttdeci">bool Modbus_Master_Read_Hold_Register(modbus_master_context_t *ctx, uint16_t start_addr, uint16_t *data, size_t number, uint8_t *buff, size_t buff_length)</div><div class="ttdoc">Modbus主机读取保持寄存器</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00555">Modbus.c:555</a></div></div>
+<div class="ttc" id="a_modbus_8h_html_af35d2d5cac75013dbff44ddf7c5524d3"><div class="ttname"><a href="_modbus_8h.html#af35d2d5cac75013dbff44ddf7c5524d3">Modbus_Payload_Append_CRC</a></div><div class="ttdeci">bool Modbus_Payload_Append_CRC(uint8_t *payload, size_t payload_length)</div><div class="ttdoc">在数据帧末尾的添加crc校验</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8c_source.html#l00071">Modbus.c:71</a></div></div>
+<div class="ttc" id="astructmodbus__master__context__t_html"><div class="ttname"><a href="structmodbus__master__context__t.html">modbus_master_context_t</a></div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00161">Modbus.h:162</a></div></div>
+<div class="ttc" id="astructmodbus__master__context__t_html_a46a3ed8e094aa3f7937fc19e3362d6fd"><div class="ttname"><a href="structmodbus__master__context__t.html#a46a3ed8e094aa3f7937fc19e3362d6fd">modbus_master_context_t::slave_addr</a></div><div class="ttdeci">uint8_t slave_addr</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00163">Modbus.h:163</a></div></div>
+<div class="ttc" id="astructmodbus__slave__context__t_html"><div class="ttname"><a href="structmodbus__slave__context__t.html">modbus_slave_context_t</a></div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00079">Modbus.h:80</a></div></div>
+<div class="ttc" id="astructmodbus__slave__context__t_html_ac41e4cb335390a1395bf4f012604a74e"><div class="ttname"><a href="structmodbus__slave__context__t.html#ac41e4cb335390a1395bf4f012604a74e">modbus_slave_context_t::slave_addr</a></div><div class="ttdeci">uint8_t slave_addr</div><div class="ttdef"><b>Definition:</b> <a href="_modbus_8h_source.html#l00083">Modbus.h:83</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>
